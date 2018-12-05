@@ -3,7 +3,6 @@ require './baked_goods'
 
 get '/' do 
     @cookie = BakedGoods.new("Chocolate Chip", "daddy", "9.99", "Cookie")
-    
     erb :home
 
 end
