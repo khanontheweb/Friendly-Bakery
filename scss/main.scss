@@ -1,5 +1,22 @@
-$nav_color: #e6b871;
+$nav_bg_color: #e6b871;
+$nav_text_color: #EEE5E9;
+$nav_size: 1.5em;
+$brand_size: 10%;
 
-nav{
-    background-color: $nav_color;
+nav {
+    background-color: $nav_bg_color;
 }
+
+.nav-link {
+    color: $nav_text_color !important;
+    font-size:  $nav_size;
+}
+
+
+
+.navbar-brand {
+    width: $brand_size;
+}
+
+
+

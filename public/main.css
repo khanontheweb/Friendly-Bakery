@@ -2,4 +2,13 @@ nav {
   background-color: #e6b871;
 }
 
+.nav-link {
+  color: #EEE5E9 !important;
+  font-size: 1.5em;
+}
+
+.navbar-brand {
+  width: 10%;
+}
+
 /*# sourceMappingURL=main.css.map */
