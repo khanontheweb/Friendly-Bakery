@@ -11,7 +11,7 @@ ActionMailer::Base.smtp_settings = {
     :enable_starttls_auto => true
 }
 
-class Catalog < ActionMailer::Base
+class Newsletter < ActionMailer::Base
     default from: 'snillmomo@gmail.com'
 
     def welcome(recipient)
@@ -22,4 +22,3 @@ class Catalog < ActionMailer::Base
 
 end
 
-Catalog.welcome("snillmomo@gmail.com").deliver_now

@@ -22,7 +22,7 @@ end
 
 post '/' do
     recipient = params['inputEmail']
-    Catalog.welcome(recipient).deliver_now
+    Newsletter.welcome(recipient).deliver_now
     redirect '/'
 end
 
