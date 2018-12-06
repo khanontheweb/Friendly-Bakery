@@ -1,5 +1,6 @@
 require 'sinatra'
 require './baked_goods'
+require './send.rb'
 
 9.times do
     BakedGoods.new("Chocolate Chip", "daddy", "9.99", "cookie","https://images.unsplash.com/photo-1500511599662-5441d83fae18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80")
@@ -17,7 +18,12 @@ end
 
 get '/' do
     erb :home
+end
 
+post '/' do
+    recipient = params['inputEmail']
+    Catalog.welcome(recipient).deliver_now
+    redirect '/'
 end
 
 get '/cakes' do 

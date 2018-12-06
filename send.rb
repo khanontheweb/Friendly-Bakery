@@ -11,15 +11,15 @@ ActionMailer::Base.smtp_settings = {
     :enable_starttls_auto => true
 }
 
-class Newsletter < ActionMailer::Base
+class Catalog < ActionMailer::Base
     default from: 'snillmomo@gmail.com'
 
     def welcome(recipient)
         @recipient = recipient
         mail(to: recipient,
-             subject: "[Signed Up] Welcome #{recipient}")
+            subject: "[Signed Up] Welcome #{recipient}")
     end
 
 end
 
-Newsletter.welcome("snillmomo@gmail.com").deliver_now
+Catalog.welcome("snillmomo@gmail.com").deliver_now
