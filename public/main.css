@@ -74,4 +74,10 @@ nav .navbar-brand {
   width: 59%;
 }
 
+.card-img-top {
+  height: 48vh;
+  width: 100%;
+  object-fit: cover;
+}
+
 /*# sourceMappingURL=main.css.map */

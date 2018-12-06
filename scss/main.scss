@@ -19,6 +19,9 @@ $lead_size: 1.9em;
 $hr_thickness: .1em;
 $hr_color: #cf5c36;
 
+//cards
+$card_height: 48vh;
+
 //global styling 
 body {
     font-family: $body_font;
@@ -132,4 +135,12 @@ nav {
 .footer-img {
     padding-left: 0 !important;
     width: 59%;
+}
+
+// cards
+.card-img-top {
+
+        height: $card_height;
+        width: 100%;
+        object-fit: cover;
 }
