@@ -1,13 +1,14 @@
 $text_outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 $border_width: 4px;
 //nav variables
-$nav_bg_color: #e6b871;
-$nav_text_color: #EEE5E9;
-$nav_hover_color: #7c7c7c;
+$bg_color: #e6b871;
+$text_color: #EEE5E9;
+$hover_color: #7c7c7c;
+$dark_bg_color: #e6b822;
 $nav_size: 3.5em;
 $nav_button_margin: 18%;
 $brand_size: 10%;
-$nav_text_margin: 20%;
+$nav_text_margin: 13%;
 
 //hero variables
 $hero: "./img/bakery_hero.png";
@@ -27,14 +28,14 @@ body {
 //nav
 
 nav {
-    background-color: $nav_bg_color;
+    background-color: $bg_color;
 
     .navbar-collapse {
         margin-left: $nav_text_margin;
     }
     
     .nav-link {
-        color: $nav_text_color !important;
+        color: $text_color !important;
         font-size:  $nav_size;
         font-family: $header_font;
         margin-right: $nav_button_margin;
@@ -42,7 +43,7 @@ nav {
     }
     
     .nav-link:hover {
-        color: $nav_hover_color !important;
+        color: $hover_color !important;
     }
     
     .navbar-brand {
@@ -60,7 +61,7 @@ nav {
     background-size: cover;
     background-position: center;
     padding-bottom: 6em;
-    color: $nav_text_color;
+    color: $text_color;
     padding-top: 3%;
     margin: 0;
     
@@ -74,7 +75,7 @@ nav {
     .lead {
         font-size: $lead_size;
         text-shadow: $text_outline;
-        color: $nav_text_color;
+        color: $text_color;
         font-weight: bolder;
     }
 
@@ -90,12 +91,45 @@ nav {
     // .btn-outline-warning {
     //     color: black;
     //     border-width: $border_width;
-    //     border-color: $nav_bg_color; /*set the color you want here*/
+    //     border-color: $bg_color; /*set the color you want here*/
     // }
     // .btn-outline-warning:hover, .btn-outline-warning:focus, .btn-outline-warning:active, .btn-outline-warning.active, .open>.dropdown-toggle.btn-outline-warning {
-    //     color: $nav_hover_color;
-    //     background-color: $nav_bg_color;
+    //     color: $hover_color;
+    //     background-color: $bg_color;
     //     border-width: $border_width;
-    //     border-color: $nav_bg_color; /*set the color you want here*/
+    //     border-color: $bg_color; /*set the color you want here*/
     // }
+}
+
+// footer 
+
+.page-footer {
+    background-color: $bg_color;
+}
+
+.footer-copyright {
+    background-color: $dark_bg_color;
+}
+
+
+.footer-header {
+    padding-right: 0 !important;
+    color: $text_color;
+    text-shadow: $text_outline;
+    
+    h5 {
+        font-size: 3em !important;
+        font-family: $header_font;
+        
+    }
+
+    p {
+        font-size: 2em !important;
+        font-family: $body_font
+    }
+}
+
+.footer-img {
+    padding-left: 0 !important;
+    width: 59%;
 }

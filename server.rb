@@ -1,35 +1,41 @@
 require 'sinatra'
 require './baked_goods'
 
-get '/' do 
-    @cookie = BakedGoods.new("Chocolate Chip", "daddy", "9.99", "Cookie")
+9.times do
+    BakedGoods.new("Chocolate Chip", "daddy", "9.99", "cookie")
+end
+
+
+get '/' do
     erb :home
 
 end
 
 get '/cakes' do 
-    erb :cakes
+    erb :items
 end
 
 get '/cakes/:cake' do
     @item = params[:item]
-    erb :items
+    erb :item
 end
 
 get '/cookies' do
-    erb :cookies
+
+    @items = BakedGoods.cookies
+    erb :items
 end
 
 get '/cookies/:cake' do
     @item = params[:item]
-    erb :items
+    erb :item
 end
 
 get '/muffins' do
-    erb :muffins
+    erb :items
 end
 
 get '/muffins/:cake' do
     @item = params[:item]
-    erb :items
+    erb :item
 end

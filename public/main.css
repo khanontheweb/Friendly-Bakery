@@ -6,7 +6,7 @@ nav {
   background-color: #e6b871;
 }
 nav .navbar-collapse {
-  margin-left: 20%;
+  margin-left: 13%;
 }
 nav .nav-link {
   color: #EEE5E9 !important;
@@ -45,6 +45,33 @@ nav .navbar-brand {
 .jumbotron hr {
   height: 0.1em;
   background-color: #cf5c36;
+}
+
+.page-footer {
+  background-color: #e6b871;
+}
+
+.footer-copyright {
+  background-color: #e6b822;
+}
+
+.footer-header {
+  padding-right: 0 !important;
+  color: #EEE5E9;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.footer-header h5 {
+  font-size: 3em !important;
+  font-family: "Yellowtail", cursive;
+}
+.footer-header p {
+  font-size: 2em !important;
+  font-family: "Open Sans", sans-serif;
+}
+
+.footer-img {
+  padding-left: 0 !important;
+  width: 59%;
 }
 
 /*# sourceMappingURL=main.css.map */

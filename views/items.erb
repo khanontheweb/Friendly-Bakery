@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row">
+    <% @items.each do |item| %>
+        <%
+            item_name = item.name
+            item_description = item.description
+            item_price = item.price
+        %>
+        <div class="col-sm-4 my-3 ">
+            <div class='card border-warning'>
+            <!--<img class='card-img-top' src="<#%=logo_url%>">-->
+            <div class='card-body'>
+                <h5 class='card-title'>
+                    <a target="_blank"> <%=item_name%> </a>
+                </h5>
+                <p class='card-text'><%=item_description %></p>
+            </div>
+        </div>
+        </div>
+    <%end%>
+    </div>
+</div>

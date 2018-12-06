@@ -1,30 +1,42 @@
 class BakedGoods
     attr_accessor :name, :description, :price, :type
-    @@cookies = Hash.new
-    @muffins = Hash.new
-    @cakes = Hash.new
+    @@cookies = []
+    @@muffins = Hash.new
+    @@cakes = Hash.new
     def initialize(name, description, price, type)
         if type.downcase == 'cookie'
-            @@cookies[name.to_sym] = {
-                :description => description,
-                :price => price,
-                :type => type
-            }
+            @name = name
+            @description = description
+            @price = price
+            @type = type
+            @@cookies << self
+
         elsif type.downcase == 'muffin'
-            @@muffin[name.to_sym] = {
-                :description => description,
-                :price => price,
-                :type => type
-            }
+            @name = name
+            @description = description
+            @price = price
+            @type = type
+            @@muffins << self
         elsif type.downcase == 'cake'
-            @@cakes[name.to_sym] = {
-                :description => description,
-                :price => price,
-                :type => type
-            }
+            @name = name
+            @description = description
+            @price = price
+            @type = type
+            @@cakes << self
         else 
             puts "This not a good"
         end
-        
+    end
+
+    def self.cookies
+        @@cookies
+    end
+
+    def self.cakes
+        @@cakes
+    end
+
+    def self.muffins
+        @@muffins
     end
 end
