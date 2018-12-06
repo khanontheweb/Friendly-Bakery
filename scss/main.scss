@@ -1,3 +1,5 @@
+$text_outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+$border_width: 4px;
 //nav variables
 $nav_bg_color: #e6b871;
 $nav_text_color: #EEE5E9;
@@ -5,13 +7,14 @@ $nav_hover_color: #7c7c7c;
 $nav_size: 3.5em;
 $nav_button_margin: 18%;
 $brand_size: 10%;
-$nav_text_margin: 19%;
+$nav_text_margin: 20%;
 
 //hero variables
 $hero: "./img/bakery_hero.png";
 $hero_opacity: 0.5;
 $header_font: 'Yellowtail', cursive;
 $body_font: 'Open Sans', sans-serif;
+$lead_size: 1.9em;
 $hr_thickness: .1em;
 $hr_color: #cf5c36;
 
@@ -57,15 +60,42 @@ nav {
     background-size: cover;
     background-position: center;
     padding-bottom: 6em;
-    //color: $nav_text_color;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: $nav_text_color;
+    padding-top: 3%;
+    margin: 0;
     
     h1 {
+        text-shadow: $text_outline;
         font-family: $header_font;
+        font-size: 7em;
+        margin:0;
+    }
+
+    .lead {
+        font-size: $lead_size;
+        text-shadow: $text_outline;
+        color: $nav_text_color;
+        font-weight: bolder;
     }
 
     hr {
         height: $hr_thickness;
         background-color: $hr_color;
     }
+    
+    // .btn-lg {
+    //     font-size: $lead_size
+    // }
+
+    // .btn-outline-warning {
+    //     color: black;
+    //     border-width: $border_width;
+    //     border-color: $nav_bg_color; /*set the color you want here*/
+    // }
+    // .btn-outline-warning:hover, .btn-outline-warning:focus, .btn-outline-warning:active, .btn-outline-warning.active, .open>.dropdown-toggle.btn-outline-warning {
+    //     color: $nav_hover_color;
+    //     background-color: $nav_bg_color;
+    //     border-width: $border_width;
+    //     border-color: $nav_bg_color; /*set the color you want here*/
+    // }
 }
