@@ -1,22 +1,43 @@
 $nav_bg_color: #e6b871;
 $nav_text_color: #EEE5E9;
-$nav_size: 1.5em;
+$nav_hover_color: #7c7c7c;
+$nav_size: 3em;
 $brand_size: 10%;
+$nav_text_margin: 24%;
+$hero: "./img/bakery_hero.png";
+$hero_opacity: 0.5;
+
+//nav
 
 nav {
     background-color: $nav_bg_color;
 }
 
+.navbar-collapse {
+    margin-left: $nav_text_margin;
+}
+
 .nav-link {
     color: $nav_text_color !important;
     font-size:  $nav_size;
+    
 }
 
-
+.nav-link:hover {
+    color: $nav_hover_color !important;
+}
 
 .navbar-brand {
     width: $brand_size;
 }
 
 
+//hero
 
+.jumbotron {
+    background-image: url($hero);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 6em;
+    
+}
