@@ -1,13 +1,5 @@
 body {
   font-family: "Open Sans", sans-serif;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 176px;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
 }
 
 nav {
@@ -59,10 +51,13 @@ nav .navbar-brand {
 
 footer {
   background-color: #e6b871;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 176px;
+}
+footer a {
+  color: #EEE5E9;
+  text-decoration: none !important;
+}
+footer a:hover {
+  color: #7c7c7c;
 }
 
 .footer-copyright {
@@ -111,6 +106,23 @@ footer {
 }
 .crop-img img {
   height: 100%;
+}
+
+.img-caption {
+  font-size: 3em;
+  font-family: "Yellowtail", cursive;
+  color: #EA98A8;
+  margin: 0;
+}
+
+.img-rule {
+  height: 0.1em;
+  background-color: #E980FC;
+  margin: 0;
+}
+
+.img-description {
+  font-family: "Open Sans", sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */

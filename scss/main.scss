@@ -1,4 +1,4 @@
-//$text_outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+$black_outline: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 $text_outline: 0px 0px 10px black;
 $border_width: 4px;
 //nav variables
@@ -22,22 +22,19 @@ $lead_size: 1.9em;
 $hr_thickness: .1em;
 $hr_color: #cf5c36;
 
+
+//main content variables
+$caption_color: #EA98A8;
+$caption_rule_color: #E980FC;
+
 //cards
 $card_height: 48vh;
 
 //global styling 
 body {
     font-family: $body_font;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 176px;
-}
 
-html {
-    position: relative;
-    min-height: 100%;
 }
-
 
 //nav
 
@@ -121,15 +118,23 @@ nav {
 
 footer {
     background-color: $bg_color;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 176px;
+
+
+    a {
+        color: $text_color;
+        text-decoration: none !important;
+    }
+
+    a:hover {
+        color: $hover_color
+    }
 
 }
 
 .footer-copyright {
     background-color: $dark_bg_color;
+    
+    
 }
 
 
@@ -189,4 +194,21 @@ footer {
     img {
         height: 100%;
     }
+}
+
+.img-caption {
+    font-size: 3em;
+    font-family: $header_font;
+    color: $caption_color;
+    margin: 0;
+}
+
+.img-rule {
+    height: $hr_thickness;
+    background-color: $caption_rule_color;
+    margin: 0;
+}
+
+.img-description {
+    font-family: $body_font;
 }
