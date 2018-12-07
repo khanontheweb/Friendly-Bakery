@@ -4,7 +4,7 @@ class BakedGoods
     @@muffins = []
     @@cakes = []
     def initialize(name, description, price, type, img)
-        @name = name
+        @name = "#{name} #{type}"
         @description = description
         @price = price
         @type = type

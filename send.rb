@@ -14,11 +14,12 @@ ActionMailer::Base.smtp_settings = {
 
 class Newsletter < ActionMailer::Base
     default from: 'snillmomo@gmail.com'
-    @items = BakedGoods.cookies
-    @muffins << BakedGoods.muffins
-    @cakes << BakedGoods.cakes
-    @items.flatten!
     def welcome(recipient)
+        @items = []
+        @items << BakedGoods.cookies
+        @items << BakedGoods.muffins
+        @items << BakedGoods.cakes
+        @items.flatten!
         @recipient = recipient
         mail(to: recipient,
             subject: "[Signed Up] Welcome #{recipient}")
