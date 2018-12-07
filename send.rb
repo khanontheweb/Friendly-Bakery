@@ -1,4 +1,5 @@
 require 'action_mailer'
+require './baked_goods'
 
 ActionMailer::Base.view_paths=File.dirname(__FILE__)
 ActionMailer::Base.smtp_settings = {
@@ -13,7 +14,10 @@ ActionMailer::Base.smtp_settings = {
 
 class Newsletter < ActionMailer::Base
     default from: 'snillmomo@gmail.com'
-
+    @items = BakedGoods.cookies
+    @muffins << BakedGoods.muffins
+    @cakes << BakedGoods.cakes
+    @items.flatten!
     def welcome(recipient)
         @recipient = recipient
         mail(to: recipient,
